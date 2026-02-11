@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.fadein{
+  animation: fadein 2s;
+  visibility: visible;
+}
+@keyframes fadein {
+  0%{
+    opacity: 10%;
+    top:20%;
+    left: 10%;
+  }
+  100%{
+    opacity: 80%;
+  }
+}
+
+.logo{
+  pointer-events: none;
+  user-select: none;
+  position:relative;
+  display:inline-block;
+  top:13vw;
+  left:-16vw;
+  transform: scale(.9);
+}
