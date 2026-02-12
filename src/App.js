@@ -1,4 +1,3 @@
-import './App.css';
 import Logo from './components/Logo';
 import SocialMedia from './components/SocialMedia';
 
@@ -8,7 +7,7 @@ function App() {
       <div className="App-header">
       <div className="Intro">
         <Logo />
-        <p>Hi! Chris Hickman here.</p>
+        <p className="typing-text">Hi! Chris Hickman here.</p>
        </div>
        <SocialMedia />
       </div>
