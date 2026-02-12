@@ -50,12 +50,10 @@ code {
 }
 
 .Intro {
-  margin: 5vw 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -64,19 +62,19 @@ code {
   }
 }
 
-
 .SocialMediaLinks {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 5vw;
   margin: 5vw 0;
   margin: 5vw auto 10vw auto;
 }
 
 .SocialMediaIcon {
+  display: block;
   width: 12vw;
-  max-width: 70px;
+  max-width: 100px;
   height: auto;
   object-fit: contain;
   transition: transform 0.2s ease;
@@ -93,12 +91,12 @@ code {
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   text-align: center;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
 }
