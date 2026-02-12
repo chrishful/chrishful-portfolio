@@ -66,6 +66,7 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items:center;
   gap: 5vw;
   margin: 5vw 0;
   margin: 5vw auto 10vw auto;
