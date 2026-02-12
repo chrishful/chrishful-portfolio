@@ -1,9 +1,21 @@
 function SocialMedia() {
   return (
     <div className="SocialMediaLinks">
-        <img class="fadein" src="/img/hickmanlogo.png" alt="Chris Hickman Logo" />
-        <img class="fadein" src="/img/hickmanlogo.png" alt="Chris Hickman Logo" />
-        <img class="fadein" src="/img/hickmanlogo.png" alt="Chris Hickman Logo" />
+        <button>
+            <img  src="/img/linkedinlogo.png" alt="LinkedIn Logo" />
+            </button>
+    <button>
+        <img  src="/img/gmaillogo.png" alt="Gmail Logo" />
+        </button>
+<button>
+        <img  src="/img/githublogo.png" alt="Github Logo" />
+        </button>
+<button>
+        <img  src="/img/discordlogo.png" alt="Discord Logo" />
+        </button>
+        <button>
+                <img src="/img/instagramlogo.png" alt="Instagram Logo" />
+                </button>
     </div>
   );
 }

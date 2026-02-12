@@ -36,3 +36,11 @@ code {
   left:-16vw;
   transform: scale(.9);
 }
+
+.SocialMediaLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    align-items: center;
+   }
