@@ -10,7 +10,7 @@ function SocialMedia() {
   <a href="https://github.com/chrishful" target="_blank" rel="noopener noreferrer">
         <img className="SocialMediaIcon" src="/img/githublogo.png" alt="Github Logo" />
         </a>
-  <a href="https://discord.com/users/chrishful" target="_blank" rel="noopener noreferrer">
+  <a href="https://discord.com/users/273197891957555212" target="_blank" rel="noopener noreferrer">
         <img className="SocialMediaIcon" src="/img/discordlogo.png" alt="Discord Logo" />
         </a>
   <a href="https://www.instagram.com/chrizzful/" target="_blank" rel="noopener noreferrer">
