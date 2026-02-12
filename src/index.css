@@ -36,6 +36,13 @@ code {
   transform: scale(0.9);
 }
 
+@media (max-width: 480px) {
+  .logo {
+    width: 50vw;
+    max-width: 200px;
+  }
+}
+
 @media (min-width: 768px) {
   .logo {
     left: -16vw;
@@ -64,7 +71,7 @@ code {
   justify-content: center;
   gap: 1.5rem;
   margin: 5vw 0;
-  width: 90%;
+  margin: 5vw auto 10vw auto;
 }
 
 .SocialMediaIcon {
