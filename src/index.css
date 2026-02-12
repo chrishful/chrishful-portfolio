@@ -32,10 +32,17 @@ code {
   user-select: none;
   position:relative;
   display:inline-block;
-  top:13vw;
+  /** top:20vw; **/
   left:-16vw;
   transform: scale(.9);
 }
+.Intro {
+  margin: 5vw 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  }
 
 .SocialMediaLinks {
     display: flex;
@@ -43,4 +50,17 @@ code {
     justify-content: space-around;
     width: 50%;
     align-items: center;
+    margin-bottom: 10vw;
    }
+
+ .SocialMediaIcon {
+      width: 70px;
+      height: auto;
+      max-height: 70px;
+      object-fit: contain;
+ }
+
+.SocialMediaLinks button {
+  all: unset;
+  cursor: pointer;
+}
