@@ -1,17 +1,29 @@
-import Logo from './components/Logo';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navigation from './components/Navigation';
 import SocialMedia from './components/SocialMedia';
+
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-header">
-      <div className="Intro">
-        <Logo />
-        <p className="typing-text">Hi! Chris Hickman here.</p>
-       </div>
-       <SocialMedia />
+    <Router>
+      <div className="App">
+        <Navigation />   {/* stays on all pages */}
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+
+        <SocialMedia />   {/* stays on all pages */}
+
       </div>
-    </div>
+    </Router>
   );
 }
 

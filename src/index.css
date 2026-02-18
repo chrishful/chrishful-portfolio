@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
 }
 
 code {
@@ -54,6 +55,7 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #282c34;
 }
 
 @media (min-width: 768px) {
@@ -68,8 +70,9 @@ code {
   justify-content: center;
   align-items:center;
   gap: 5vw;
-  margin: 5vw 0;
-  margin: 5vw auto 10vw auto;
+  margin: 5vh auto 5vh auto;
+  height: 10vh;
+  background-color: #282c34;
 }
 
 .SocialMediaIcon {
@@ -79,11 +82,13 @@ code {
   height: auto;
   object-fit: contain;
   transition: transform 0.2s ease;
+  background-color: #282c34;
 }
 
 .SocialMediaLinks button {
   all: unset;
   cursor: pointer;
+  background-color: #282c34;
 }
 
 .App {
@@ -92,7 +97,7 @@ code {
 
 .App-header {
   background-color: #282c34;
-  height: 100vh;
+  height: 67vh;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -117,4 +122,40 @@ code {
 }
 @keyframes blink {
   50% { border-color: transparent; }
+}
+
+.Navigation {
+  display: flex;
+  align-items: space-around;
+  justify-content: center;
+  height: 2vh;
+  padding: 5vh 0;
+  gap: 5vw;
+  background-color: #282c34;
+}
+
+.Navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.Navigation a {
+  transition: all 0.2s ease;
+}
+
+.Navigation a:hover {
+  color: #E6E6FA;
+ box-shadow: 0 6px 6px -4px rgba(230, 230, 250, 0.8);
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 50vw;
+    max-width: 200px;
+  }
+  .Navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
