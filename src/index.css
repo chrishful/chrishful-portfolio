@@ -124,16 +124,6 @@ code {
   50% { border-color: transparent; }
 }
 
-.Navigation {
-  display: flex;
-  align-items: space-around;
-  justify-content: center;
-  height: 2vh;
-  padding: 5vh 0;
-  gap: 5vw;
-  background-color: #282c34;
-}
-
 .Navigation a {
   color: white;
   text-decoration: none;
@@ -154,8 +144,80 @@ code {
     width: 50vw;
     max-width: 200px;
   }
-  .Navigation {
-    flex-direction: column;
-    gap: 10px;
+}
+.Navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  gap: 3rem;
+  background-color: #282c34;
+  position: relative;
+}
+
+/* Desktop links */
+.desktop-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.desktop-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .desktop-links {
+    display: none;
   }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(40, 44, 52, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.overlay-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
