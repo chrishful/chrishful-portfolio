@@ -1,36 +1,36 @@
 import { useState, useEffect, useRef } from "react";
 
 const phrases = [
-                  "Full-Stack Developer",
-                  "React & TypeScript Pro",
-                  "Kubernetes Enthusiast",
-                  "Backend Problem Solver",
-                  "Software Architect",
-                  "UI/UX Innovator",
-                  "Creative Coder",
-                  "Digital Craftsman",
-                  "Graphic Design Specialist",
-                  "Visual Storyteller",
-                  "Pottery Artist",
-                  "Motorcycle Rider",
-                  "Photographer & Coder",
-                  "Workout Tech Builder",
-                  "Data Pipeline Engineer",
-                  "Frontend Visionary",
-                  "Interactive Developer",
-                  "Mobile-First Designer",
-                  "Portfolio Innovator",
-                  "Hands-On Programmer",
-                  "Algorithm Tinkerer",
-                  "Creative Technologist",
-                  "Startup-Oriented Engineer",
-                  "Coding Craftsman",
-                  "Full-Stack Visionary",
-                  "Software Problem Solver",
-                  "Code & Canvas",
-                  "Design-Oriented Engineer",
-                  "Tech-Driven Creator"
-                ];
+  "Full-Stack Developer",
+  "React & TypeScript Pro",
+  "Kubernetes Enthusiast",
+  "Backend Problem Solver",
+  "Software Architect",
+  "UI/UX Innovator",
+  "Creative Coder",
+  "Digital Craftsman",
+  "Graphic Design Specialist",
+  "Visual Storyteller",
+  "Pottery Artist",
+  "Motorcycle Rider",
+  "Photographer & Coder",
+  "Workout Tech Builder",
+  "Data Pipeline Engineer",
+  "Frontend Visionary",
+  "Interactive Developer",
+  "Mobile-First Designer",
+  "Portfolio Innovator",
+  "Hands-On Programmer",
+  "Algorithm Tinkerer",
+  "Creative Technologist",
+  "Startup-Oriented Engineer",
+  "Coding Craftsman",
+  "Full-Stack Visionary",
+  "Software Problem Solver",
+  "Code & Canvas",
+  "Design-Oriented Engineer",
+  "Tech-Driven Creator",
+];
 
 // Center box (50% in middle)
 const CENTER_BOX = { xMin: 25, xMax: 75, yMin: 25, yMax: 100 };
@@ -45,13 +45,26 @@ export default function FloatingBubbles() {
   useEffect(() => {
     // Initialize bubbles outside center
     const initial = phrases.map((text) => {
-      let x = Math.random() * (OUTER_MARGIN.xMax - OUTER_MARGIN.xMin) + OUTER_MARGIN.xMin;
-      let y = Math.random() * (OUTER_MARGIN.yMax - OUTER_MARGIN.yMin) + OUTER_MARGIN.yMin;
+      let x =
+        Math.random() * (OUTER_MARGIN.xMax - OUTER_MARGIN.xMin) +
+        OUTER_MARGIN.xMin;
+      let y =
+        Math.random() * (OUTER_MARGIN.yMax - OUTER_MARGIN.yMin) +
+        OUTER_MARGIN.yMin;
 
       // Ensure initial position is outside center
-      while (x > CENTER_BOX.xMin && x < CENTER_BOX.xMax && y > CENTER_BOX.yMin && y < CENTER_BOX.yMax) {
-        x = Math.random() * (OUTER_MARGIN.xMax - OUTER_MARGIN.xMin) + OUTER_MARGIN.xMin;
-        y = Math.random() * (OUTER_MARGIN.yMax - OUTER_MARGIN.yMin) + OUTER_MARGIN.yMin;
+      while (
+        x > CENTER_BOX.xMin &&
+        x < CENTER_BOX.xMax &&
+        y > CENTER_BOX.yMin &&
+        y < CENTER_BOX.yMax
+      ) {
+        x =
+          Math.random() * (OUTER_MARGIN.xMax - OUTER_MARGIN.xMin) +
+          OUTER_MARGIN.xMin;
+        y =
+          Math.random() * (OUTER_MARGIN.yMax - OUTER_MARGIN.yMin) +
+          OUTER_MARGIN.yMin;
       }
 
       const vx = (Math.random() * 0.1 + 0.01) * (Math.random() < 0.5 ? 1 : -1);
@@ -93,7 +106,7 @@ export default function FloatingBubbles() {
           }
 
           return { ...b, x: nx, y: ny, vx: nvx, vy: nvy };
-        })
+        }),
       );
 
       requestRef.current = requestAnimationFrame(animate);
@@ -114,7 +127,6 @@ export default function FloatingBubbles() {
 
     return () => clearTimeout(timeout);
   }, [visibleCount, bubbles.length]);
-
 
   return (
     <div className="floating-bubbles-container">

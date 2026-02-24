@@ -7,7 +7,6 @@ function Navigation() {
   return (
     <>
       <nav className="Navigation">
-
         {/* Desktop Links */}
         <div className="desktop-links">
           <Link to="/">Home</Link>
@@ -17,10 +16,7 @@ function Navigation() {
         </div>
 
         {/* Mobile Hamburger */}
-        <button
-          className="hamburger"
-          onClick={() => setOpen(true)}
-        >
+        <button className="hamburger" onClick={() => setOpen(true)}>
           ☰
         </button>
       </nav>
@@ -28,18 +24,23 @@ function Navigation() {
       {/* Mobile Overlay */}
       {open && (
         <div className="overlay">
-          <button
-            className="close-btn"
-            onClick={() => setOpen(false)}
-          >
+          <button className="close-btn" onClick={() => setOpen(false)}>
             ✕
           </button>
 
           <div className="overlay-links">
-            <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-            <Link to="/about" onClick={() => setOpen(false)}>About</Link>
-            <Link to="/projects" onClick={() => setOpen(false)}>Projects</Link>
-            <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
+            <Link to="/" onClick={() => setOpen(false)}>
+              Home
+            </Link>
+            <Link to="/about" onClick={() => setOpen(false)}>
+              About
+            </Link>
+            <Link to="/projects" onClick={() => setOpen(false)}>
+              Projects
+            </Link>
+            <Link to="/contact" onClick={() => setOpen(false)}>
+              Contact
+            </Link>
           </div>
         </div>
       )}

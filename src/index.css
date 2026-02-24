@@ -1,29 +1,29 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.fadein{
+.fadein {
   animation: fadein 2s;
   visibility: visible;
 }
 @keyframes fadein {
-  0%{
+  0% {
     opacity: 10%;
-    top:20%;
+    top: 20%;
     left: 10%;
   }
-  100%{
+  100% {
     opacity: 80%;
   }
 }
@@ -68,7 +68,7 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   gap: 5vw;
   margin: 5vh auto 5vh auto;
   height: 10vh;
@@ -108,20 +108,28 @@ code {
 }
 
 .typing-text {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.5rem;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #fff;
   width: 0;
-  animation: typing 1s steps(25, end) forwards, blink 0.7s step-end infinite;
+  animation:
+    typing 1s steps(25, end) forwards,
+    blink 0.7s step-end infinite;
 }
 @keyframes typing {
-  from { width: 0; }
-  to   { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .Navigation a {
@@ -135,8 +143,8 @@ code {
 }
 
 .Navigation a:hover {
-  color: #E6E6FA;
- box-shadow: 0 6px 6px -4px rgba(230, 230, 250, 0.8);
+  color: #e6e6fa;
+  box-shadow: 0 6px 6px -4px rgba(230, 230, 250, 0.8);
 }
 
 @media (max-width: 480px) {
@@ -178,7 +186,6 @@ code {
 
 /* MOBILE */
 @media (max-width: 768px) {
-
   .desktop-links {
     display: none;
   }
@@ -238,7 +245,7 @@ code {
   font-size: 2rem;
   font-weight: bold;
   color: white;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transform: translate(-50%, -50%);
   white-space: nowrap;
 }
@@ -264,17 +271,18 @@ code {
   position: absolute;
   font-weight: bold;
   color: white;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transform: translate(-50%, -50%);
-  animation: drift 8s ease-in-out infinite alternate, fade 4s ease-in-out infinite alternate;
+  animation:
+    drift 8s ease-in-out infinite alternate,
+    fade 4s ease-in-out infinite alternate;
 }
-
 
 .bubble {
   position: absolute;
   font-weight: bold;
   color: white;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transform: translate(-50%, -50%);
   white-space: nowrap;
 
@@ -282,13 +290,22 @@ code {
   animation: fadeOpacity 4s ease-in-out infinite;
   animation: fadeScale 4s ease-in-out infinite;
   animation-fill-mode: both; /* ensures smooth start/end */
-
 }
 
 @keyframes fadeScale {
-  0%   { opacity: 0.8; }
-  25%  { opacity: 0.0; }
-  50%  { opacity: 0.0;  }
-  75%  { opacity: 0.0; }
-  100% { opacity: 0.8;  }
+  0% {
+    opacity: 0.8;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }
