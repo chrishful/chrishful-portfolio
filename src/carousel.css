@@ -40,9 +40,10 @@
 }
 
 .project-card img {
-  width: 100%;
-  height: 40%;
+  width: 20%;
+  height: 50%;
   object-fit: cover;
+  object-position: top;
 }
 
 .project-bottom {
@@ -155,6 +156,7 @@
   }
   .project-card img {
     height: 40%;
+    width: 100%;
   }
 
   .project-bottom {

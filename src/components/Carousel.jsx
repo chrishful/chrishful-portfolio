@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import "../carousel.css";
-import pottery from "../resources/pottery.jpg";
+import pottery from "../resources/pottery.png";
 
 const projects = [
   {
