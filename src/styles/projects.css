@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap");
+
+.projects-root {
+  min-height: 100vh;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem 5rem;
+  font-family: "Syne", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.projects-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(120, 160, 255, 0.05) 0%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.projects-corner {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+.projects-corner.tl {
+  top: 2rem;
+  left: 2rem;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+.projects-corner.br {
+  bottom: 2rem;
+  right: 2rem;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.projects-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  width: 100%;
+  animation: fade-up 0.7s ease both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects-header {
+  margin-bottom: 3rem;
+}
+
+.projects-eyebrow {
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: rgba(180, 200, 255, 0.45);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.projects-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 0.75rem;
+}
+
+.projects-subtext {
+  font-family: "DM Mono", monospace;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1.7;
+}
+
+/* Feature card */
+.project-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.3s;
+}
+
+.project-card:hover {
+  border-color: rgba(180, 200, 255, 0.2);
+}
+
+.project-screenshot {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  filter: brightness(0.9);
+  transition: filter 0.3s;
+}
+
+.project-card:hover .project-screenshot {
+  filter: brightness(1);
+}
+
+.project-body {
+  padding: 2rem 2.5rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .project-body {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+}
+
+.project-left {
+}
+
+.project-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem;
+}
+
+.project-tagline {
+  font-family: "DM Mono", monospace;
+  font-size: 0.78rem;
+  color: rgba(180, 200, 255, 0.55);
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.project-description {
+  font-family: "DM Mono", monospace;
+  font-size: 0.83rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+.project-description strong {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+.project-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 0.25rem;
+}
+
+.project-tech-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: rgba(180, 200, 255, 0.35);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.project-tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.project-tech-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.project-tech-item:last-child {
+  border-bottom: none;
+}
+
+.project-tech-category {
+  font-size: 0.62rem;
+  color: rgba(180, 200, 255, 0.3);
+  letter-spacing: 0.08em;
+}
+
+.project-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.project-btn-primary {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  padding: 0.65rem 1rem;
+  border-radius: 4px;
+  background: #fff;
+  color: #282c34;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+
+.project-btn-primary:hover {
+  background: rgba(220, 230, 255, 1);
+  transform: translateY(-2px);
+}
+
+.project-btn-secondary {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  padding: 0.65rem 1rem;
+  border-radius: 4px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.15s;
+}
+
+.project-btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* More coming soon */
+.projects-footer {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.projects-footer-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.projects-footer-text {
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.18);
+  text-transform: uppercase;
+  white-space: nowrap;
+}

@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap");
+
+.home-root {
+  min-height: 85vh;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  font-family: "Syne", sans-serif;
+}
+
+/* Subtle grid overlay */
+.home-root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+/* Glow blob */
+.home-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(120, 160, 255, 0.07) 0%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: pulse-glow 6s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 1;
+  }
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fade-up 0.8s ease both;
+  text-align: center;
+  max-width: 680px;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-logo-wrap {
+  position: absolute;
+  top: 130%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+  scale: 3;
+  filter: blur(1px);
+}
+@media (max-width: 480px) {
+  .home-logo-wrap {
+    top: 60%;
+    left: 50%;
+    scale: 2.5;
+  }
+}
+
+.home-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: rgba(180, 200, 255, 0.5);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  animation: fade-up 0.7s 0.1s ease both;
+}
+
+.home-name {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0;
+  animation: fade-up 0.7s 0.15s ease both;
+}
+
+.home-role-line {
+  font-family: "DM Mono", monospace;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 400;
+  color: rgba(180, 200, 255, 0.75);
+  height: 1.6em;
+  display: flex;
+  align-items: center;
+  gap: 0.3ch;
+  margin-top: 0.4rem;
+  animation: fade-up 0.7s 0.25s ease both;
+}
+
+.home-role-prefix {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.home-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: rgba(180, 200, 255, 0.8);
+  margin-left: 2px;
+  animation: blink-cursor 0.75s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink-cursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+.home-divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 1.25rem auto;
+  animation: fade-up 0.7s 0.35s ease both;
+}
+
+.home-bio {
+  font-family: "DM Mono", monospace;
+  font-size: clamp(0.82rem, 1.6vw, 0.92rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 520px;
+  margin: 0 auto;
+  animation: fade-up 0.7s 0.45s ease both;
+}
+
+.home-bio strong {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+.home-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+  animation: fade-up 0.7s 0.55s ease both;
+}
+
+.home-pill {
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(180, 200, 255, 0.2);
+  color: rgba(180, 200, 255, 0.65);
+  background: rgba(180, 200, 255, 0.04);
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
+}
+
+.home-pill:hover {
+  border-color: rgba(180, 200, 255, 0.5);
+  color: rgba(180, 200, 255, 1);
+  background: rgba(180, 200, 255, 0.08);
+}
+
+.home-ctas {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fade-up 0.7s 0.65s ease both;
+}
+
+.btn-primary {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  padding: 0.75rem 1.75rem;
+  border-radius: 4px;
+  background: #fff;
+  color: #282c34;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: rgba(220, 230, 255, 1);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  padding: 0.75rem 1.75rem;
+  border-radius: 4px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.15s;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Corner accent lines */
+.home-corner {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+.home-corner.tl {
+  top: 2rem;
+  left: 2rem;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+.home-corner.br {
+  bottom: 2rem;
+  right: 2rem;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+@media (max-width: 480px) {
+  .home-corner {
+    display: none;
+  }
+  .home-name {
+    font-size: 2.6rem;
+  }
+}
