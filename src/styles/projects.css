@@ -304,3 +304,9 @@
   text-transform: uppercase;
   white-space: nowrap;
 }
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}

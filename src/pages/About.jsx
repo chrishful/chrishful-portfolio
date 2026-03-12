@@ -42,24 +42,24 @@ export default function About() {
                 <p>
                   I'm a backend software engineer with{" "}
                   <strong>3+ years of production experience</strong> building
-                  high-scale systems in Java and Spring Boot. Most recently I
-                  was at
+                  high-scale systems in Java and Spring Boot. Most recently I'm
+                  at
                   <strong> Walmart Emerging Tech</strong>, shipping features for
-                  Sparky — an AI-powered shopping assistant serving over a
+                  Sparky - our AI-powered shopping assistant serving over a
                   million customers a month.
                 </p>
                 <p>
-                  What makes me a little different: before I wrote my first line
+                  What makes me a little different? before I wrote my first line
                   of Java, I was studying <strong>Graphic Art & Design</strong>.
                   I care about how things look and feel, not just how they run.
                   That instinct shows up in everything from how I structure an
                   API to how I think about developer experience.
                 </p>
                 <p>
-                  I'm drawn to teams building something genuinely new —
-                  especially in the AI space. I want to work somewhere where the
-                  problems are hard, the people are sharp, and the work actually
-                  matters.
+                  I'm drawn to teams building something genuinely new -
+                  especially in the AI space (unless it's just some ChatGPT
+                  wrapper). I want to work somewhere where the problems are
+                  hard, the people are sharp, and the work actually matters.
                 </p>
                 <p>
                   Outside of work I'm a <strong>motorcycle rider</strong>, a{" "}
@@ -139,7 +139,6 @@ export default function About() {
                 {[
                   "🏍️ Motorcycles",
                   "🏺 Pottery",
-                  "👨‍👧 Dad of two",
                   "🎮 Game Dev",
                   "🎨 Graphic Design",
                   "📚 Reading",
