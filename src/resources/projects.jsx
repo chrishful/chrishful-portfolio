@@ -1,8 +1,30 @@
 import pottery from "../assets/pottery.png";
 import kafkaVisualizer from "../assets/kafka-visualizer.png";
 import urlShortener from "../assets/url-shortener.png";
+import roleTrackr from "../assets/roletrackr.png";
 
 const projects = [
+    {
+      title: "RoleTrackr",
+      tagline: "A job application pipeline tracker powered by AI.",
+      description:
+        "A full-stack job search management tool that ingests application confirmation emails via Postmark, extracts structured data using a multi-agent AI pipeline, and tracks the full application lifecycle in a clean dashboard. Features real-time updates via Supabase, status filtering, and a chat interface for querying your pipeline.",
+      image: roleTrackr,
+      link: null,
+      github: "https://github.com/chrishful/career-builder",
+      tech: [
+        { label: "Gemini", category: "AI" },
+        { label: "A2A", category: "AI" },
+        { label: "Java", category: "Backend" },
+        { label: "Spring Boot", category: "Backend" },
+        { label: "Supabase", category: "Backend" },
+        { label: "Cloudmailin", category: "Backend" },
+        { label: "React", category: "Frontend" },
+        { label: "CSS", category: "Frontend" },
+        { label: "Render", category: "DevOps" },
+        { label: "Vercel", category: "DevOps" },
+      ],
+    },
   {
     title: "Kafka Event Visualizer",
     tagline: "An observability tool for AI feedback pipelines.",
